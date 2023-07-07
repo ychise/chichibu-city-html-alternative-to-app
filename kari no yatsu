@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>秩父市観光アプリ</title>
+  <style>
+    button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    .content {
+      display: none;
+    }
+  </style>
+  <script>
+    function showContent(id) {
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <h1>秩父市観光アプリ</h1>
+
+  <button onclick="showContent('public_transport')">公共交通機関</button>
+  <button onclick="showContent('accommodation')">宿泊</button>
+  <button onclick="showContent('sightseeing')">観光</button>
+  <button onclick="showContent('services')">市内サービス</button>
+  <button onclick="showContent('discount_coupons')">割引券・クーポン</button>
+
+  <div id="public_transport" class="content">
+    <!-- 公共交通機関のコンテンツをここに記述 -->
+    <h2>公共交通機関</h2>
+    <button onclick="showContent('railway')">鉄道</button>
+    <button onclick="showContent('bus')">市内バス</button>
+  </div>
+
+  <div id="railway" class="content">
+    <!-- 鉄道の運行情報・時刻表などのコンテンツをここに記述 -->
+    <h3>運行情報</h3>
+    <p>運行情報を表示</p>
+    <h4>時刻表</h4>
+    <p>各路線の時刻表を表示</p>
+    <!-- ここに具体的な運行情報や時刻表の表示を追加 -->
+  </div>
+
+  <div id="bus" class="content">
+    <!-- 市内バスの運行情報・時刻表などのコンテンツをここに記述 -->
+    <h3>運行情報</h3>
+    <p>運行情報を表示</p>
+    <h4>時刻表</h4>
+    <p>各バスの時刻表を表示</p>
+    <!-- ここに具体的な運行情報や時刻表の表示を追加 -->
+  </div>
+
+  <div id="accommodation" class="content">
+    <!-- 宿泊のコンテンツをここに記述 -->
+    <h2>ホテル・旅館一覧</h2>
+    <ul>
+      <li><a href="https://example.com/hotel1">ホテルA</a> - tel: xxx-xxx-xxxx</li>
+      <li><a href="https://example.com/hotel2">ホテルB</a> - tel: xxx-xxx-xxxx</li>
+      <li><a href="https://example.com/hotel3">ホテルC</a> - tel: xxx-xxx-xxxx</li>
+      <!-- 他のホテルの情報も追加 -->
+    </ul>
+  </div>
+
+  <div id="sightseeing" class="content">
+    <!-- 観光のコンテンツをここに記述 -->
+    <h2>観光情報</h2>
+    <button onclick="showContent('recommended_spots')">おすすめ観光スポット</button>
+    <button onclick="showContent('all_spots')">全観光スポット</button>
+    <h3>非常事態案内ルート</h3>
+    <p>非常事態時の案内ルート、避難場所を表示</p>
+  </div>
+
+  <div id="recommended_spots" class="content">
+    <!-- おすすめ観光スポットのコンテンツをここに記述 -->
+    <h3>おすすめ観光スポット</h3>
+    <p>秩父市でおすすめの観光スポットを表示</p>
+    <!-- ここに具体的なおすすめ観光スポットの表示を追加 -->
+  </div>
+
+  <div id="all_spots" class="content">
+    <!-- 全観光スポットのマップ表示などのコンテンツをここに記述 -->
+    <h3>全観光スポット</h3>
+    <p>秩父市内の観光スポットを地図上で表示</p>
+    <!-- ここに地図表示やスポットの一覧表示を追加 -->
+  </div>
+
+  <div id="services" class="content">
+    <!-- 市内サービスのコンテンツをここに記述 -->
+    <h2>市内サービス</h2>
+    <ul>
+      <li>サービス1</li>
+      <li>サービス2</li>
+      <li>サービス3</li>
+      <!-- 他のサービス情報も追加 -->
+    </ul>
+    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+  </div>
+
+  <div id="discount_coupons" class="content">
+    <!-- 割引券・クーポンのコンテンツをここに記述 -->
+    <h2>割引券・クーポン</h2>
+    <ul>
+      <li>クーポン1</li>
+      <li>クーポン2</li>
+      <li>クーポン3</li>
+      <!-- 他の割引券・クーポン情報も追加 -->
+    </ul>
+    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+  </div>
+
+</body>
+</html>
