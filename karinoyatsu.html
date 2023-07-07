@@ -4,74 +4,33 @@
   <meta charset="UTF-8">
   <title>秩父市観光アプリ</title>
   <style>
-    .train_character8_green.png{
-      display: inline-block;
-      padding: 0;
+    button {
+      padding: 10px;
       margin: 5px;
-      background: url(path/to/image.png) no-repeat center center;
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-      border: none;
+      font-size: 16px;
+    }
+    .content {
+      display: none;
     }
   </style>
-  <style>
-    .building_hotel_small.png{
-      display: inline-block;
-      padding: 0;
-      margin: 5px;
-      background: url(path/to/image.png) no-repeat center center;
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-      border: none;
+  <script>
+    function showContent(id) {
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      document.getElementById(id).style.display = "block";
     }
-  </style>
-  <style>
-    .kankou_asia_family.png{
-      display: inline-block;
-      padding: 0;
-      margin: 5px;
-      background: url(path/to/image.png) no-repeat center center;
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-      border: none;
-    }
-  </style>
-  <style>
-    .soudan_madoguchi.png{
-      display: inline-block;
-      padding: 0;
-      margin: 5px;
-      background: url(path/to/image.png) no-repeat center center;
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-      border: none;
-    }
-　</style>
-  <style>
-    .ticket_waribikiken.png{
-      display: inline-block;
-      padding: 0;
-      margin: 5px;
-      background: url(path/to/image.png) no-repeat center center;
-      background-size: cover;
-      width: 100px;
-      height: 100px;
-      border: none;
-    }
-　</style>
+  </script>
 </head>
 <body>
   <h1>秩父市観光アプリ</h1>
-  
-  <button class="train_character8_green.png" onclick="showContent('public_transport')">公共交通機関</button>
-  <button class="building_hotel_small.png" onclick="showContent('accommodation')">宿泊</button>
-  <button class="kankou_asia_family.png" onclick="showContent('sightseeing')">観光</button>
-  <button class="soudan_madoguchi.png" onclick="showContent('services')">市内サービス</button>
-  <button class="ticket_waribikiken.png" onclick="showContent('discount_coupons')">割引券・クーポン</button>
+
+  <button onclick="showContent('public_transport')">公共交通機関</button>
+  <button onclick="showContent('accommodation')">宿泊</button>
+  <button onclick="showContent('sightseeing')">観光</button>
+  <button onclick="showContent('services')">市内サービス</button>
+  <button onclick="showContent('discount_coupons')">割引券・クーポン</button>
 
   <div id="public_transport" class="content" style="display: none;">
     <!-- 公共交通機関のコンテンツをここに記述 -->
