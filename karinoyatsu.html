@@ -108,13 +108,15 @@
     }
   </style>
   <script>
-    function showContent(id) {
-      var contents = document.getElementsByClassName("content");
-      for (var i = 0; i < contents.length; i++) {
-        contents[i].style.display = "none";
-      }
-      document.getElementById(id).style.display = "block";
-    }
+    window.addEventListener("load", function() {
+      var splashScreen = document.getElementById("splash-screen");
+      setTimeout(function() {
+        splashScreen.style.opacity = "0";
+        setTimeout(function() {
+          splashScreen.style.display = "none";
+        }, 2000);
+      }, 2000);
+    });
   </script>
 </head>
 <body>
@@ -237,16 +239,13 @@
   </div>
 
   <script>
-    window.addEventListener("load", function() {
-      var splashScreen = document.getElementById("splash-screen");
-      setTimeout(function() {
-        splashScreen.style.opacity = "0";
-        setTimeout(function() {
-          splashScreen.style.display = "none";
-        }, 2000);
-      }, 2000);
-    });
+    function showContent(id) {
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      document.getElementById(id).style.display = "block";
+    }
   </script>
 </body>
 </html>
-
