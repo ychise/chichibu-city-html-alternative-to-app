@@ -61,6 +61,8 @@
       padding: 20px;
       margin-top: 20px;
       box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+      max-height: 500px;
+      overflow-y: auto;
     }
 
     .active {
@@ -71,17 +73,12 @@
     @media only screen and (max-width: 600px) {
       h1 {
         padding: 10px;
-        font-size: 24px;
+        font-size: 20px;
       }
 
       button {
-        font-size: 18px;
-        padding: 12px;
-      }
-
-      .content {
-        padding: 10px;
-        margin-top: 10px;
+        font-size: 14px;
+        padding: 8px;
       }
     }
   </style>
@@ -164,7 +161,7 @@
       <li>スポット1</li>
       <li>スポット2</li>
       <li>スポット3</li>
-    <!-- ここに具体的なおすすめ観光スポットの表示を追加 -->
+      <!-- ここに具体的なおすすめ観光スポットの表示を追加 -->
     </ul>
   </div>
 
@@ -176,7 +173,7 @@
     <img src="https://user-images.githubusercontent.com/138853967/253239905-cea27ef3-350c-410c-a1bb-4c8a6a98c4f8.png" alt="map Image">
   </div>
 
-  <div id="services" class="content" style="display: none;">
+  <div id="services" class="content" style="display: block;">
     <!-- 市内サービスのコンテンツをここに記述 -->
     <h2>市内サービス</h2>
     <ul>
@@ -185,7 +182,7 @@
       <li><a href="https://example.com/service3">サービス3</a></li>
       <!-- 他のサービス情報も追加 -->
     </ul>
-    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+    <p>お問い合わせ先: xxx-xxx-xxxx</p>
   </div>
 
   <div id="discount_coupons" class="content" style="display: none;">
@@ -197,7 +194,7 @@
       <li><a href="https://example.com/coupon3">クーポン3</a></li>
       <!-- 他の割引券・クーポン情報も追加 -->
     </ul>
-    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+    <p>お問い合わせ先: xxx-xxx-xxxx</p>
   </div>
 
   <div id="news" class="content" style="display: none;">
@@ -209,7 +206,7 @@
       <li><a href="https://example.com/news3">情報3</a></li>
       <!-- 他の割引券・クーポン情報も追加 -->
     </ul>
-    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+    <p>お問い合わせ先: xxx-xxx-xxxx</p>
   </div>
 
 </body>
