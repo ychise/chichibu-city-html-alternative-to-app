@@ -4,13 +4,70 @@
   <meta charset="UTF-8">
   <title>秩父市観光アプリ</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      background: linear-gradient(to right, #498C10, #9ED44B);
+      color: #fff;
+      padding: 20px;
+      margin: 0;
+    }
+
+    h2 {
+      color: #498C10;
+      margin-top: 30px;
+    }
+
+    p {
+      margin: 0;
+      padding: 10px;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
     button {
+      background-color: #ffffef;
+      color: #498C10;
       padding: 10px;
       margin: 5px;
       font-size: 16px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      cursor: pointer;
     }
+
     .content {
       display: none;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    /* スマートフォンのレスポンシブデザイン */
+    @media only screen and (max-width: 600px) {
+      h1 {
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px;
+      }
     }
   </style>
   <script>
@@ -26,11 +83,14 @@
 <body>
   <h1>秩父市観光アプリ</h1>
 
-  <button onclick="showContent('public_transport')">公共交通機関</button>
-  <button onclick="showContent('accommodation')">宿泊</button>
-  <button onclick="showContent('sightseeing')">観光</button>
-  <button onclick="showContent('services')">市内サービス</button>
-  <button onclick="showContent('discount_coupons')">割引券・クーポン</button>
+  <div style="text-align: center;">
+    <button onclick="showContent('public_transport')">公共交通機関</button>
+    <button onclick="showContent('accommodation')">宿泊</button>
+    <button onclick="showContent('sightseeing')">観光</button>
+    <button onclick="showContent('services')">市内サービス</button>
+    <button onclick="showContent('discount_coupons')">割引券・クーポン</button>
+    <button onclick="showContent('news')">お知らせ</button>
+  </div>
 
   <div id="public_transport" class="content" style="display: none;">
     <!-- 公共交通機関のコンテンツをここに記述 -->
@@ -41,19 +101,21 @@
 
   <div id="railway" class="content" style="display: none;">
     <!-- 鉄道の運行情報・時刻表などのコンテンツをここに記述 -->
+    <h2>鉄道</h2>
     <h3>運行情報</h3>
     <p>運行情報を表示</p>
-    <h4>時刻表</h4>
+    <h3>時刻表</h3>
     <p>各路線の時刻表を表示</p>
     <!-- ここに具体的な運行情報や時刻表の表示を追加 -->
   </div>
 
   <div id="bus" class="content" style="display: none;">
     <!-- 市内バスの運行情報・時刻表などのコンテンツをここに記述 -->
+    <h2>市内バス</h2>
     <h3>運行情報</h3>
     <p>運行情報を表示</p>
-    <h4>時刻表</h4>
-    <p>各バスの時刻表を表示</p>
+    <h3>時刻表</h3>
+    <p>各路線の時刻表を表示</p>
     <!-- ここに具体的な運行情報や時刻表の表示を追加 -->
   </div>
 
@@ -115,5 +177,19 @@
     <p>お問い合わせ先:xxx-xxx-xxxx</p>
   </div>
 
+  <div id="news" class="content" style="display: none;">
+    <!-- 割引券・クーポンのコンテンツをここに記述 -->
+    <h2>お知らせ</h2>
+    <ul>
+      <li>情報1</li>
+      <li>情報2</li>
+      <li>情報3</li>
+      <!-- 他の割引券・クーポン情報も追加 -->
+    </ul>
+    <p>お問い合わせ先:xxx-xxx-xxxx</p>
+  </div>
+
 </body>
 </html>
+
+
